@@ -126,7 +126,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add New Mood" image="smiley.fill" catalog="system" id="asM-CS-PTj"/>
                     <connections>
+                        <outlet property="activityImage" destination="VRO-I4-Aoy" id="ywy-dp-ii1"/>
                         <outlet property="activityPicker" destination="d7P-ec-PHF" id="8Tp-q5-GE0"/>
+                        <outlet property="moodFaceView" destination="gKL-7O-byD" id="0Dn-bp-Qds"/>
                         <outlet property="picker" destination="REd-vc-eed" id="eU6-s2-rPS"/>
                         <outlet property="sleepHoursPicker" destination="Q1T-Pe-blc" id="PFN-La-Tb3"/>
                     </connections>

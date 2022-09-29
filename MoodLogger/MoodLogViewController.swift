@@ -11,9 +11,11 @@ class MoodLogViewController: UIViewController {
     @IBOutlet var picker: UIPickerView!
     @IBOutlet var activityPicker: UIPickerView!
     @IBOutlet var sleepHoursPicker: UIPickerView!
+    @IBOutlet weak var moodFaceView: UIImageView!
+    @IBOutlet weak var activityImage: UIImageView!
     
-    let data = ["Apple", "Orange", "Banana", "Grapes", "Strawberries", "Watermelon"]
-    let data2 = ["Chicken", "Beef", "Fish", "Pork", "Lamb", "Bison"]
+    let feelings = ["Good", "OK", "Bad"]
+    let activities = ["Work", "Leisure", "Exercise"]
     let hoursOfSleep = ["<4", "5", "6", "7", "8", "9", "10", "11" , "12", ">12"]
     
     override func viewDidLoad() {
@@ -34,9 +36,9 @@ extension MoodLogViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerView {
         case picker:
-            return data.count
+            return feelings.count
         case activityPicker:
-            return data2.count
+            return activities.count
         case sleepHoursPicker:
             return hoursOfSleep.count
         default:
@@ -52,13 +54,26 @@ extension MoodLogViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView {
         case picker:
-            return data[row]
+            return feelings[row]
         case activityPicker:
-            return data2[row]
+            return activities[row]
         case sleepHoursPicker:
             return hoursOfSleep[row]
         default:
             return "null"
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch pickerView {
+        case picker:
+            moodFaceView.image = UIImage(named: feelings[row])
+            // feeling = Mood.FeelingTag.init(rawValue: Int16(row))
+        case activityPicker:
+            activityImage.image = UIImage(named: activities[row])
+            // activity = Mood.ActivityTag.init(rawValue: Int16(row))
+        default:
+            return
         }
     }
 }

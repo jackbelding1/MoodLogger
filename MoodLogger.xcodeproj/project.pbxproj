@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7777762028E65E1F00012FDF /* MoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7777761F28E65E1F00012FDF /* MoodTableViewCell.swift */; };
 		77B391F628E3A35B0070A899 /* MoodLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B391F528E3A35B0070A899 /* MoodLogViewController.swift */; };
 		77D9B32B28E260CA0069DCAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D9B32A28E260CA0069DCAB /* AppDelegate.swift */; };
 		77D9B32D28E260CA0069DCAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D9B32C28E260CA0069DCAB /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7777761F28E65E1F00012FDF /* MoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTableViewCell.swift; sourceTree = "<group>"; };
 		77B391F528E3A35B0070A899 /* MoodLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodLogViewController.swift; sourceTree = "<group>"; };
 		77D9B32728E260CA0069DCAB /* MoodLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77D9B32A28E260CA0069DCAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				77D9B33328E260CB0069DCAB /* Assets.xcassets */,
 				77D9B33528E260CB0069DCAB /* LaunchScreen.storyboard */,
 				77D9B33828E260CB0069DCAB /* Info.plist */,
+				7777761F28E65E1F00012FDF /* MoodTableViewCell.swift */,
 			);
 			path = MoodLogger;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77D9B32F28E260CA0069DCAB /* ViewController.swift in Sources */,
+				7777762028E65E1F00012FDF /* MoodTableViewCell.swift in Sources */,
 				77D9B32B28E260CA0069DCAB /* AppDelegate.swift in Sources */,
 				77B391F628E3A35B0070A899 /* MoodLogViewController.swift in Sources */,
 				77D9B32D28E260CA0069DCAB /* SceneDelegate.swift in Sources */,
