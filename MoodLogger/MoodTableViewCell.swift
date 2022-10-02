@@ -13,6 +13,6 @@ class MoodTableViewCell: UITableViewCell {
     @IBOutlet weak var logFeelingImage: UIImageView!
     @IBOutlet weak var logActivityText: UILabel!
     @IBOutlet weak var logActivityImage: UILabel!
-    @IBOutlet weak var logPeopleText: UILabel!
+    @IBOutlet weak var logSleepText: UILabel!
     
 }

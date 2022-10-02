@@ -77,7 +77,7 @@ extension MoodLogViewController: UIPickerViewDelegate {
             activityImage.image = UIImage(named: activities[row])
              activity = Int16(row)
         case sleepHoursPicker:
-            activity = Int16(row)
+            sleep = Int16(row)
         default:
             return
         }

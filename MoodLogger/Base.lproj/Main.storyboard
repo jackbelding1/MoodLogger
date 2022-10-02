@@ -294,6 +294,13 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                        <connections>
+                                            <outlet property="logActivityText" destination="tD7-RK-uXk" id="3ko-ut-QLN"/>
+                                            <outlet property="logDateText" destination="a9h-82-Rhz" id="vqF-Bp-kYJ"/>
+                                            <outlet property="logFeelingImage" destination="tlP-5n-QIM" id="vlM-4b-F8U"/>
+                                            <outlet property="logFeelingText" destination="GIs-dm-y5S" id="exq-dw-mfZ"/>
+                                            <outlet property="logSleepText" destination="OFJ-Wk-oCn" id="dsa-35-8QH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
