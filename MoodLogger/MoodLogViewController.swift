@@ -5,6 +5,7 @@
 //  Created by Jack Belding on 9/27/22.
 //
 import UIKit
+import CoreData
 
 class MoodLogViewController: UIViewController {
     
@@ -17,6 +18,9 @@ class MoodLogViewController: UIViewController {
     let feelings = ["Good", "OK", "Bad"]
     let activities = ["Work", "Leisure", "Exercise"]
     let hoursOfSleep = ["<4", "5", "6", "7", "8", "9", "10", "11" , "12", ">12"]
+    var activity:Int16 = 0
+    var feeling:Int16 = 0;
+    var sleep:Int16 = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,12 +72,41 @@ extension MoodLogViewController: UIPickerViewDelegate {
         switch pickerView {
         case picker:
             moodFaceView.image = UIImage(named: feelings[row])
-            // feeling = Mood.FeelingTag.init(rawValue: Int16(row))
+             feeling = Int16(row)
         case activityPicker:
             activityImage.image = UIImage(named: activities[row])
-            // activity = Mood.ActivityTag.init(rawValue: Int16(row))
+             activity = Int16(row)
+        case sleepHoursPicker:
+            activity = Int16(row)
         default:
             return
+        }
+    }
+}
+
+extension MoodLogViewController {
+    @IBAction func save(){
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            let context = appDelegate.persistentContainer.viewContext
+            
+            guard let entityDescription = NSEntityDescription.entity(forEntityName: "Mood", in: context) else { return }
+            
+            let newValue = NSManagedObject(entity: entityDescription, insertInto: context)
+            newValue.setValue(activity, forKey: "activityValue")
+            newValue.setValue(feeling, forKey: "feelingValue")
+            newValue.setValue(sleep, forKey: "sleep")
+            var dateTest = Date()
+            newValue.setValue(dateTest, forKey: "date")
+            do {
+                try context.save()
+                print("Saved: \(activity)")
+                print("Saved: \(feeling)")
+                print("Saved: \(sleep)")
+                print("Saved: \(dateTest)")
+            } catch {
+                print("Saving error")
+            }
+            
         }
     }
 }
